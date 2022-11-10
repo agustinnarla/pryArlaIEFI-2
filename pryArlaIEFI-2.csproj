@@ -46,11 +46,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActividad.Designer.cs">
+      <DependentUpon>frmActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarActividad.Designer.cs">
+      <DependentUpon>frmEliminarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarBarrio.Designer.cs">
+      <DependentUpon>frmEliminarBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarCliente.Designer.cs">
+      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarActividad.Designer.cs">
+      <DependentUpon>frmModificarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarBarrio.Designer.cs">
+      <DependentUpon>frmModificarBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarCliente.Designer.cs">
+      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaActividad.Designer.cs">
+      <DependentUpon>frmNuevaActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoBarrio.Designer.cs">
+      <DependentUpon>frmNuevoBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoCliente.Designer.cs">
+      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -60,8 +126,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmActividad.resx">
+      <DependentUpon>frmActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarActividad.resx">
+      <DependentUpon>frmEliminarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarBarrio.resx">
+      <DependentUpon>frmEliminarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarCliente.resx">
+      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarActividad.resx">
+      <DependentUpon>frmModificarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarBarrio.resx">
+      <DependentUpon>frmModificarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarCliente.resx">
+      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaActividad.resx">
+      <DependentUpon>frmNuevaActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoBarrio.resx">
+      <DependentUpon>frmNuevoBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoCliente.resx">
+      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
