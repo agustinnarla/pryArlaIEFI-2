@@ -32,6 +32,9 @@ namespace pryArlaIEFI_2
                 panelActividad.Visible = false;
                 panelConsulta.Visible = false;
                 panelCliente.Visible = true;
+                panelProfesor.Visible = false;
+                panelPlan.Visible = false;
+
             }
             else
             {
@@ -74,6 +77,8 @@ namespace pryArlaIEFI_2
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
                 panelPlan.Visible = false;
+                panelProfesor.Visible = false;
+
             }
             else
             {
@@ -90,6 +95,8 @@ namespace pryArlaIEFI_2
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
                 panelPlan.Visible = false;
+                panelProfesor.Visible = false;
+
             }
             else
             {
@@ -148,6 +155,8 @@ namespace pryArlaIEFI_2
                 panelConsulta.Visible = true;
                 panelCliente.Visible = false;
                 panelPlan.Visible = false;
+                panelProfesor.Visible = false;
+
             }
             else
             {
@@ -179,11 +188,14 @@ namespace pryArlaIEFI_2
             panelConsulta.Visible = false;
             panelCliente.Visible = false;
             panelPlan.Visible = false;
+            panelProfesor.Visible = false;
+
         }
 
         private void cmdAcceso_Click(object sender, EventArgs e)
         {
-           
+            frmAcceso objAcceso = new frmAcceso();  
+            objAcceso.ShowDialog();
         }
 
         private void cmdPlan_Click(object sender, EventArgs e)
@@ -195,11 +207,71 @@ namespace pryArlaIEFI_2
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
                 panelPlan.Visible = true;
+                panelProfesor.Visible = false;
             }
             else
             {
                 panelPlan.Visible = false;
             }
+        }
+
+        private void cmdProfesor_Click(object sender, EventArgs e)
+        {
+            if (!panelProfesor.Visible)
+            {
+                panelBarrio.Visible = false;
+                panelActividad.Visible = false;
+                panelConsulta.Visible = false;
+                panelCliente.Visible = false;
+                panelPlan.Visible = false;
+                panelProfesor.Visible = true;
+
+            }
+            else
+            {
+                panelProfesor.Visible = false;
+            }
+        }
+
+        private void pMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmdAltaProfe_Click(object sender, EventArgs e)
+        {
+            frmNuevoProfesor objNuevoProfesor = new frmNuevoProfesor();
+            objNuevoProfesor.ShowDialog();
+        }
+
+        private void cdmEliminarProfe_Click(object sender, EventArgs e)
+        {
+            frmEliminarProfesor objEliminarProfesor  = new frmEliminarProfesor();
+            objEliminarProfesor.ShowDialog();
+        }
+
+        private void cmdModificarPorfe_Click(object sender, EventArgs e)
+        {
+            frmModificarProfesor objModificarProfesor = new frmModificarProfesor();
+            objModificarProfesor.ShowDialog();
+        }
+
+        private void cmdConsultaActividad_Click(object sender, EventArgs e)
+        {
+            frmConsultaActividad objConsultarActividad = new frmConsultaActividad();
+            objConsultarActividad.ShowDialog();
+        }
+
+        private void cmdConsultaBarrio_Click(object sender, EventArgs e)
+        {
+            frmConsultarBarrio objConsultarBarrio = new frmConsultarBarrio();
+            objConsultarBarrio.ShowDialog();
+        }
+
+        private void cmdConsultaProfe_Click(object sender, EventArgs e)
+        {
+            frmConsultarProfe objConsultarProfe = new frmConsultarProfe();
+            objConsultarProfe.ShowDialog();
         }
     }
 }

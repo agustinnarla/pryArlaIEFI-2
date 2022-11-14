@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.lblDni = new System.Windows.Forms.Label();
-            this.lblNombreApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
             this.lblActiviadad = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
             this.dtpCalendario = new System.Windows.Forms.DateTimePicker();
             this.lblFechaCuota = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.lstDias = new System.Windows.Forms.ComboBox();
             this.mrcDatos = new System.Windows.Forms.GroupBox();
             this.cmdCargar = new System.Windows.Forms.Button();
-            this.txtActividad = new System.Windows.Forms.TextBox();
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.cmdSalir = new System.Windows.Forms.Button();
+            this.lstActividad = new System.Windows.Forms.ComboBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,19 +58,19 @@
             this.lblDni.TabIndex = 0;
             this.lblDni.Text = "Dni";
             // 
-            // lblNombreApellido
+            // lblNombre
             // 
-            this.lblNombreApellido.AutoSize = true;
-            this.lblNombreApellido.Location = new System.Drawing.Point(62, 34);
-            this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(92, 13);
-            this.lblNombreApellido.TabIndex = 1;
-            this.lblNombreApellido.Text = "Nombre y Apellido";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(62, 34);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre";
             // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(62, 63);
+            this.lblSaldo.Location = new System.Drawing.Point(62, 86);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(34, 13);
             this.lblSaldo.TabIndex = 2;
@@ -77,7 +79,7 @@
             // lblActiviadad
             // 
             this.lblActiviadad.AutoSize = true;
-            this.lblActiviadad.Location = new System.Drawing.Point(62, 92);
+            this.lblActiviadad.Location = new System.Drawing.Point(62, 115);
             this.lblActiviadad.Name = "lblActiviadad";
             this.lblActiviadad.Size = new System.Drawing.Size(51, 13);
             this.lblActiviadad.TabIndex = 3;
@@ -86,7 +88,7 @@
             // lblDias
             // 
             this.lblDias.AutoSize = true;
-            this.lblDias.Location = new System.Drawing.Point(62, 121);
+            this.lblDias.Location = new System.Drawing.Point(62, 144);
             this.lblDias.Name = "lblDias";
             this.lblDias.Size = new System.Drawing.Size(28, 13);
             this.lblDias.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // dtpCalendario
             // 
-            this.dtpCalendario.Location = new System.Drawing.Point(175, 150);
+            this.dtpCalendario.Location = new System.Drawing.Point(175, 173);
             this.dtpCalendario.Name = "dtpCalendario";
             this.dtpCalendario.Size = new System.Drawing.Size(200, 20);
             this.dtpCalendario.TabIndex = 5;
@@ -102,7 +104,7 @@
             // lblFechaCuota
             // 
             this.lblFechaCuota.AutoSize = true;
-            this.lblFechaCuota.Location = new System.Drawing.Point(62, 150);
+            this.lblFechaCuota.Location = new System.Drawing.Point(62, 173);
             this.lblFechaCuota.Name = "lblFechaCuota";
             this.lblFechaCuota.Size = new System.Drawing.Size(88, 13);
             this.lblFechaCuota.TabIndex = 6;
@@ -115,42 +117,49 @@
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 7;
             // 
-            // txtNombreApellido
+            // txtNombre
             // 
-            this.txtNombreApellido.Enabled = false;
-            this.txtNombreApellido.Location = new System.Drawing.Point(175, 32);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreApellido.TabIndex = 8;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(175, 32);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 8;
             // 
             // txtSaldo
             // 
             this.txtSaldo.Enabled = false;
-            this.txtSaldo.Location = new System.Drawing.Point(175, 61);
+            this.txtSaldo.Location = new System.Drawing.Point(175, 84);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(100, 20);
             this.txtSaldo.TabIndex = 9;
             // 
             // lstDias
             // 
+            this.lstDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstDias.FormattingEnabled = true;
-            this.lstDias.Location = new System.Drawing.Point(175, 120);
+            this.lstDias.Items.AddRange(new object[] {
+            "2 días a la semana $1000",
+            "3 días a la semana $1500",
+            "5 días a la semana $2500"});
+            this.lstDias.Location = new System.Drawing.Point(175, 143);
             this.lstDias.Name = "lstDias";
             this.lstDias.Size = new System.Drawing.Size(200, 21);
             this.lstDias.TabIndex = 11;
             // 
             // mrcDatos
             // 
-            this.mrcDatos.Controls.Add(this.txtActividad);
+            this.mrcDatos.Controls.Add(this.txtApellido);
+            this.mrcDatos.Controls.Add(this.lblApellido);
+            this.mrcDatos.Controls.Add(this.lstActividad);
             this.mrcDatos.Controls.Add(this.lstDias);
             this.mrcDatos.Controls.Add(this.txtSaldo);
-            this.mrcDatos.Controls.Add(this.txtNombreApellido);
+            this.mrcDatos.Controls.Add(this.txtNombre);
             this.mrcDatos.Controls.Add(this.lblFechaCuota);
             this.mrcDatos.Controls.Add(this.dtpCalendario);
             this.mrcDatos.Controls.Add(this.lblDias);
             this.mrcDatos.Controls.Add(this.lblActiviadad);
             this.mrcDatos.Controls.Add(this.lblSaldo);
-            this.mrcDatos.Controls.Add(this.lblNombreApellido);
+            this.mrcDatos.Controls.Add(this.lblNombre);
             this.mrcDatos.Location = new System.Drawing.Point(46, 61);
             this.mrcDatos.Name = "mrcDatos";
             this.mrcDatos.Size = new System.Drawing.Size(389, 209);
@@ -165,14 +174,6 @@
             this.cmdCargar.TabIndex = 13;
             this.cmdCargar.Text = "Cargar";
             this.cmdCargar.UseVisualStyleBackColor = true;
-            // 
-            // txtActividad
-            // 
-            this.txtActividad.Enabled = false;
-            this.txtActividad.Location = new System.Drawing.Point(175, 89);
-            this.txtActividad.Name = "txtActividad";
-            this.txtActividad.Size = new System.Drawing.Size(100, 20);
-            this.txtActividad.TabIndex = 12;
             // 
             // cmdConsultar
             // 
@@ -191,6 +192,32 @@
             this.cmdSalir.TabIndex = 15;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
+            // 
+            // lstActividad
+            // 
+            this.lstActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstActividad.FormattingEnabled = true;
+            this.lstActividad.Location = new System.Drawing.Point(175, 115);
+            this.lstActividad.Name = "lstActividad";
+            this.lstActividad.Size = new System.Drawing.Size(200, 21);
+            this.lstActividad.TabIndex = 12;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Enabled = false;
+            this.txtApellido.Location = new System.Drawing.Point(175, 58);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 14;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(62, 60);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 13;
+            this.lblApellido.Text = "Apellido";
             // 
             // frmCaja
             // 
@@ -216,20 +243,22 @@
         #endregion
 
         private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblNombreApellido;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.Label lblActiviadad;
         private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.DateTimePicker dtpCalendario;
         private System.Windows.Forms.Label lblFechaCuota;
         private System.Windows.Forms.TextBox txtDni;
-        private System.Windows.Forms.TextBox txtNombreApellido;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.ComboBox lstDias;
         private System.Windows.Forms.GroupBox mrcDatos;
-        private System.Windows.Forms.TextBox txtActividad;
         private System.Windows.Forms.Button cmdCargar;
         private System.Windows.Forms.Button cmdConsultar;
         private System.Windows.Forms.Button cmdSalir;
+        private System.Windows.Forms.ComboBox lstActividad;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label lblApellido;
     }
 }

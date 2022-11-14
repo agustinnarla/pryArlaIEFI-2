@@ -30,29 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoCliente));
             this.mrcDatosClientes = new System.Windows.Forms.GroupBox();
+            this.cmdAgregarActividad = new System.Windows.Forms.Button();
+            this.cmdAgregarBarrio = new System.Windows.Forms.Button();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lstActividades = new System.Windows.Forms.ComboBox();
             this.lstBarrios = new System.Windows.Forms.ComboBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblBarrio = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
-            this.lblBarrio = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblActividad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
             this.pickFoto = new System.Windows.Forms.PictureBox();
-            this.lblActividad = new System.Windows.Forms.Label();
-            this.lstActividades = new System.Windows.Forms.ComboBox();
-            this.cmdAgregarBarrio = new System.Windows.Forms.Button();
-            this.cmdAgregarActividad = new System.Windows.Forms.Button();
             this.cmdVolver = new System.Windows.Forms.Button();
             this.cmdCargar = new System.Windows.Forms.Button();
+            this.lstSexo = new System.Windows.Forms.ComboBox();
+            this.lblSexo = new System.Windows.Forms.Label();
             this.mrcDatosClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pickFoto)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +62,8 @@
             // mrcDatosClientes
             // 
             this.mrcDatosClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mrcDatosClientes.Controls.Add(this.lstSexo);
+            this.mrcDatosClientes.Controls.Add(this.lblSexo);
             this.mrcDatosClientes.Controls.Add(this.cmdAgregarActividad);
             this.mrcDatosClientes.Controls.Add(this.cmdAgregarBarrio);
             this.mrcDatosClientes.Controls.Add(this.lblApellido);
@@ -87,6 +91,76 @@
             this.mrcDatosClientes.TabStop = false;
             this.mrcDatosClientes.Text = "Datos del cliente";
             // 
+            // cmdAgregarActividad
+            // 
+            this.cmdAgregarActividad.Location = new System.Drawing.Point(572, 96);
+            this.cmdAgregarActividad.Name = "cmdAgregarActividad";
+            this.cmdAgregarActividad.Size = new System.Drawing.Size(25, 23);
+            this.cmdAgregarActividad.TabIndex = 22;
+            this.cmdAgregarActividad.Text = "+";
+            this.cmdAgregarActividad.UseVisualStyleBackColor = true;
+            this.cmdAgregarActividad.Click += new System.EventHandler(this.cmdAgregarActividad_Click);
+            // 
+            // cmdAgregarBarrio
+            // 
+            this.cmdAgregarBarrio.Location = new System.Drawing.Point(572, 63);
+            this.cmdAgregarBarrio.Name = "cmdAgregarBarrio";
+            this.cmdAgregarBarrio.Size = new System.Drawing.Size(25, 23);
+            this.cmdAgregarBarrio.TabIndex = 21;
+            this.cmdAgregarBarrio.Text = "+";
+            this.cmdAgregarBarrio.UseVisualStyleBackColor = true;
+            this.cmdAgregarBarrio.Click += new System.EventHandler(this.cmdAgregarBarrio_Click);
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(24, 68);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(47, 13);
+            this.lblApellido.TabIndex = 20;
+            this.lblApellido.Text = "Apellido:";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtApellido.Location = new System.Drawing.Point(156, 66);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox3.Location = new System.Drawing.Point(443, 131);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(90, 20);
+            this.textBox3.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Location = new System.Drawing.Point(156, 130);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Location = new System.Drawing.Point(156, 101);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // lstActividades
+            // 
+            this.lstActividades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstActividades.FormattingEnabled = true;
+            this.lstActividades.Location = new System.Drawing.Point(443, 98);
+            this.lstActividades.Name = "lstActividades";
+            this.lstActividades.Size = new System.Drawing.Size(123, 21);
+            this.lstActividades.TabIndex = 8;
+            // 
             // lstBarrios
             // 
             this.lstBarrios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -96,6 +170,15 @@
             this.lstBarrios.Size = new System.Drawing.Size(123, 21);
             this.lstBarrios.TabIndex = 7;
             // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(331, 40);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Direccion:";
+            // 
             // txtDireccion
             // 
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -103,6 +186,15 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(123, 20);
             this.txtDireccion.TabIndex = 6;
+            // 
+            // lblBarrio
+            // 
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(331, 70);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(37, 13);
+            this.lblBarrio.TabIndex = 3;
+            this.lblBarrio.Text = "Barrio:";
             // 
             // txtCorreo
             // 
@@ -129,15 +221,6 @@
             this.lblTelefono.TabIndex = 7;
             this.lblTelefono.Text = "Telefono:";
             // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(24, 164);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(96, 13);
-            this.lblCorreo.TabIndex = 6;
-            this.lblCorreo.Text = "Correo electronico:";
-            // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
@@ -147,23 +230,23 @@
             this.lblSaldo.TabIndex = 5;
             this.lblSaldo.Text = "Saldo:";
             // 
-            // lblBarrio
+            // lblCorreo
             // 
-            this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(331, 70);
-            this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(37, 13);
-            this.lblBarrio.TabIndex = 3;
-            this.lblBarrio.Text = "Barrio:";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Location = new System.Drawing.Point(24, 164);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(96, 13);
+            this.lblCorreo.TabIndex = 6;
+            this.lblCorreo.Text = "Correo electronico:";
             // 
-            // lblDireccion
+            // lblActividad
             // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(331, 40);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
-            this.lblDireccion.TabIndex = 2;
-            this.lblDireccion.Text = "Direccion:";
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Location = new System.Drawing.Point(331, 100);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(54, 13);
+            this.lblActividad.TabIndex = 4;
+            this.lblActividad.Text = "Actividad:";
             // 
             // lblNombre
             // 
@@ -183,47 +266,6 @@
             this.lblDni.TabIndex = 0;
             this.lblDni.Text = "DNI:";
             // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(156, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(156, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Location = new System.Drawing.Point(443, 131);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtApellido.Location = new System.Drawing.Point(156, 66);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 2;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(24, 68);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(47, 13);
-            this.lblApellido.TabIndex = 20;
-            this.lblApellido.Text = "Apellido:";
-            // 
             // pickFoto
             // 
             this.pickFoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pickFoto.ErrorImage")));
@@ -235,44 +277,6 @@
             this.pickFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pickFoto.TabIndex = 6;
             this.pickFoto.TabStop = false;
-            // 
-            // lblActividad
-            // 
-            this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(331, 100);
-            this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(54, 13);
-            this.lblActividad.TabIndex = 4;
-            this.lblActividad.Text = "Actividad:";
-            // 
-            // lstActividades
-            // 
-            this.lstActividades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstActividades.FormattingEnabled = true;
-            this.lstActividades.Location = new System.Drawing.Point(443, 98);
-            this.lstActividades.Name = "lstActividades";
-            this.lstActividades.Size = new System.Drawing.Size(123, 21);
-            this.lstActividades.TabIndex = 8;
-            // 
-            // cmdAgregarBarrio
-            // 
-            this.cmdAgregarBarrio.Location = new System.Drawing.Point(572, 63);
-            this.cmdAgregarBarrio.Name = "cmdAgregarBarrio";
-            this.cmdAgregarBarrio.Size = new System.Drawing.Size(25, 23);
-            this.cmdAgregarBarrio.TabIndex = 21;
-            this.cmdAgregarBarrio.Text = "+";
-            this.cmdAgregarBarrio.UseVisualStyleBackColor = true;
-            this.cmdAgregarBarrio.Click += new System.EventHandler(this.cmdAgregarBarrio_Click);
-            // 
-            // cmdAgregarActividad
-            // 
-            this.cmdAgregarActividad.Location = new System.Drawing.Point(572, 96);
-            this.cmdAgregarActividad.Name = "cmdAgregarActividad";
-            this.cmdAgregarActividad.Size = new System.Drawing.Size(25, 23);
-            this.cmdAgregarActividad.TabIndex = 22;
-            this.cmdAgregarActividad.Text = "+";
-            this.cmdAgregarActividad.UseVisualStyleBackColor = true;
-            this.cmdAgregarActividad.Click += new System.EventHandler(this.cmdAgregarActividad_Click);
             // 
             // cmdVolver
             // 
@@ -291,6 +295,27 @@
             this.cmdCargar.TabIndex = 16;
             this.cmdCargar.Text = "Cargar";
             this.cmdCargar.UseVisualStyleBackColor = true;
+            // 
+            // lstSexo
+            // 
+            this.lstSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstSexo.FormattingEnabled = true;
+            this.lstSexo.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.lstSexo.Location = new System.Drawing.Point(443, 161);
+            this.lstSexo.Name = "lstSexo";
+            this.lstSexo.Size = new System.Drawing.Size(54, 21);
+            this.lstSexo.TabIndex = 24;
+            // 
+            // lblSexo
+            // 
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Location = new System.Drawing.Point(331, 161);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(34, 13);
+            this.lblSexo.TabIndex = 23;
+            this.lblSexo.Text = "Sexo:";
             // 
             // frmNuevoCliente
             // 
@@ -338,5 +363,7 @@
         private System.Windows.Forms.Button cmdAgregarBarrio;
         private System.Windows.Forms.Button cmdVolver;
         private System.Windows.Forms.Button cmdCargar;
+        private System.Windows.Forms.ComboBox lstSexo;
+        private System.Windows.Forms.Label lblSexo;
     }
 }
