@@ -33,7 +33,7 @@ namespace pryArlaIEFI_2
                 panelConsulta.Visible = false;
                 panelCliente.Visible = true;
                 panelProfesor.Visible = false;
-                panelPlan.Visible = false;
+             
 
             }
             else
@@ -45,8 +45,7 @@ namespace pryArlaIEFI_2
 
         private void cmdCaja_Click(object sender, EventArgs e)
         {
-            frmCaja objCaja = new frmCaja();
-            objCaja.ShowDialog();
+            
 
         }
        
@@ -76,7 +75,7 @@ namespace pryArlaIEFI_2
                 panelActividad.Visible = true;
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
-                panelPlan.Visible = false;
+               
                 panelProfesor.Visible = false;
 
             }
@@ -94,7 +93,7 @@ namespace pryArlaIEFI_2
                 panelActividad.Visible = false;
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
-                panelPlan.Visible = false;
+                
                 panelProfesor.Visible = false;
 
             }
@@ -154,7 +153,7 @@ namespace pryArlaIEFI_2
                 panelActividad.Visible = false;
                 panelConsulta.Visible = true;
                 panelCliente.Visible = false;
-                panelPlan.Visible = false;
+
                 panelProfesor.Visible = false;
 
             }
@@ -187,7 +186,7 @@ namespace pryArlaIEFI_2
             panelActividad.Visible = false;
             panelConsulta.Visible = false;
             panelCliente.Visible = false;
-            panelPlan.Visible = false;
+       
             panelProfesor.Visible = false;
 
         }
@@ -198,22 +197,7 @@ namespace pryArlaIEFI_2
             objAcceso.ShowDialog();
         }
 
-        private void cmdPlan_Click(object sender, EventArgs e)
-        {
-            if (!panelPlan.Visible)
-            {
-                panelBarrio.Visible = false;
-                panelActividad.Visible = false;
-                panelConsulta.Visible = false;
-                panelCliente.Visible = false;
-                panelPlan.Visible = true;
-                panelProfesor.Visible = false;
-            }
-            else
-            {
-                panelPlan.Visible = false;
-            }
-        }
+       
 
         private void cmdProfesor_Click(object sender, EventArgs e)
         {
@@ -223,7 +207,7 @@ namespace pryArlaIEFI_2
                 panelActividad.Visible = false;
                 panelConsulta.Visible = false;
                 panelCliente.Visible = false;
-                panelPlan.Visible = false;
+             
                 panelProfesor.Visible = true;
 
             }
@@ -270,8 +254,12 @@ namespace pryArlaIEFI_2
 
         private void cmdConsultaProfe_Click(object sender, EventArgs e)
         {
-            frmConsultarProfe objConsultarProfe = new frmConsultarProfe();
-            objConsultarProfe.ShowDialog();
+          
+        }
+
+        private void cmdCargar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,34 +39,41 @@
             // lblNombreBarrio
             // 
             this.lblNombreBarrio.AutoSize = true;
-            this.lblNombreBarrio.Location = new System.Drawing.Point(15, 33);
+            this.lblNombreBarrio.Location = new System.Drawing.Point(18, 30);
+            this.lblNombreBarrio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreBarrio.Name = "lblNombreBarrio";
-            this.lblNombreBarrio.Size = new System.Drawing.Size(91, 13);
+            this.lblNombreBarrio.Size = new System.Drawing.Size(124, 12);
             this.lblNombreBarrio.TabIndex = 0;
             this.lblNombreBarrio.Text = "Nombre del Barrio";
             // 
             // txtNombreBarrio
             // 
-            this.txtNombreBarrio.Location = new System.Drawing.Point(110, 30);
+            this.txtNombreBarrio.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.txtNombreBarrio.Location = new System.Drawing.Point(143, 27);
+            this.txtNombreBarrio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreBarrio.Name = "txtNombreBarrio";
-            this.txtNombreBarrio.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreBarrio.Size = new System.Drawing.Size(204, 20);
             this.txtNombreBarrio.TabIndex = 1;
+            this.txtNombreBarrio.TextChanged += new System.EventHandler(this.txtNombreBarrio_TextChanged);
             // 
             // mrcNuevoBarrio
             // 
             this.mrcNuevoBarrio.Controls.Add(this.lblNombreBarrio);
             this.mrcNuevoBarrio.Controls.Add(this.txtNombreBarrio);
-            this.mrcNuevoBarrio.Location = new System.Drawing.Point(12, 12);
+            this.mrcNuevoBarrio.Location = new System.Drawing.Point(14, 11);
+            this.mrcNuevoBarrio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mrcNuevoBarrio.Name = "mrcNuevoBarrio";
-            this.mrcNuevoBarrio.Size = new System.Drawing.Size(304, 74);
+            this.mrcNuevoBarrio.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.mrcNuevoBarrio.Size = new System.Drawing.Size(355, 68);
             this.mrcNuevoBarrio.TabIndex = 2;
             this.mrcNuevoBarrio.TabStop = false;
             // 
             // cmdSalir
             // 
-            this.cmdSalir.Location = new System.Drawing.Point(113, 92);
+            this.cmdSalir.Location = new System.Drawing.Point(154, 85);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(84, 30);
+            this.cmdSalir.Size = new System.Drawing.Size(98, 28);
             this.cmdSalir.TabIndex = 17;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
@@ -74,24 +81,31 @@
             // 
             // cmdCargar
             // 
-            this.cmdCargar.Location = new System.Drawing.Point(216, 92);
+            this.cmdCargar.Enabled = false;
+            this.cmdCargar.Location = new System.Drawing.Point(274, 85);
+            this.cmdCargar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(81, 30);
+            this.cmdCargar.Size = new System.Drawing.Size(94, 28);
             this.cmdCargar.TabIndex = 16;
             this.cmdCargar.Text = "Cargar";
             this.cmdCargar.UseVisualStyleBackColor = true;
+            this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 
             // frmNuevoBarrio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 138);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(390, 127);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdCargar);
             this.Controls.Add(this.mrcNuevoBarrio);
+            this.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmNuevoBarrio";
             this.ShowIcon = false;
             this.Text = "Nuevo Barrio";
+            this.Load += new System.EventHandler(this.frmNuevoBarrio_Load);
             this.mrcNuevoBarrio.ResumeLayout(false);
             this.mrcNuevoBarrio.PerformLayout();
             this.ResumeLayout(false);

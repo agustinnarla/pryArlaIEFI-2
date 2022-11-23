@@ -34,25 +34,28 @@
             this.mrcDatos = new System.Windows.Forms.GroupBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblCodigo_Actividad = new System.Windows.Forms.Label();
-            this.cmdEliminar = new System.Windows.Forms.Button();
             this.lblActividad = new System.Windows.Forms.Label();
+            this.cmdEliminar = new System.Windows.Forms.Button();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdConsultar
             // 
-            this.cmdConsultar.Location = new System.Drawing.Point(252, 46);
+            this.cmdConsultar.Location = new System.Drawing.Point(294, 42);
+            this.cmdConsultar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdConsultar.Name = "cmdConsultar";
-            this.cmdConsultar.Size = new System.Drawing.Size(75, 23);
+            this.cmdConsultar.Size = new System.Drawing.Size(88, 21);
             this.cmdConsultar.TabIndex = 13;
             this.cmdConsultar.Text = "Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
             // cmdVolver
             // 
-            this.cmdVolver.Location = new System.Drawing.Point(160, 152);
+            this.cmdVolver.Location = new System.Drawing.Point(236, 140);
+            this.cmdVolver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdVolver.Name = "cmdVolver";
-            this.cmdVolver.Size = new System.Drawing.Size(75, 23);
+            this.cmdVolver.Size = new System.Drawing.Size(88, 21);
             this.cmdVolver.TabIndex = 12;
             this.cmdVolver.Text = "Volver";
             this.cmdVolver.UseVisualStyleBackColor = true;
@@ -62,10 +65,12 @@
             // 
             this.lstActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstActividad.FormattingEnabled = true;
-            this.lstActividad.Location = new System.Drawing.Point(141, 19);
+            this.lstActividad.Location = new System.Drawing.Point(164, 18);
+            this.lstActividad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lstActividad.Name = "lstActividad";
-            this.lstActividad.Size = new System.Drawing.Size(186, 21);
+            this.lstActividad.Size = new System.Drawing.Size(216, 20);
             this.lstActividad.TabIndex = 9;
+            this.lstActividad.SelectedIndexChanged += new System.EventHandler(this.lstActividad_SelectedIndexChanged);
             // 
             // mrcDatos
             // 
@@ -74,59 +79,71 @@
             this.mrcDatos.Controls.Add(this.lstActividad);
             this.mrcDatos.Controls.Add(this.lblCodigo_Actividad);
             this.mrcDatos.Controls.Add(this.lblActividad);
-            this.mrcDatos.Location = new System.Drawing.Point(19, 14);
+            this.mrcDatos.Location = new System.Drawing.Point(22, 13);
+            this.mrcDatos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mrcDatos.Name = "mrcDatos";
-            this.mrcDatos.Size = new System.Drawing.Size(339, 132);
+            this.mrcDatos.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.mrcDatos.Size = new System.Drawing.Size(396, 122);
             this.mrcDatos.TabIndex = 10;
             this.mrcDatos.TabStop = false;
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(221, 87);
+            this.lblCodigo.Location = new System.Drawing.Point(258, 80);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(10, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(12, 12);
             this.lblCodigo.TabIndex = 5;
             this.lblCodigo.Text = "-";
             // 
             // lblCodigo_Actividad
             // 
             this.lblCodigo_Actividad.AutoSize = true;
-            this.lblCodigo_Actividad.Location = new System.Drawing.Point(18, 87);
+            this.lblCodigo_Actividad.Location = new System.Drawing.Point(21, 80);
+            this.lblCodigo_Actividad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo_Actividad.Name = "lblCodigo_Actividad";
-            this.lblCodigo_Actividad.Size = new System.Drawing.Size(87, 13);
+            this.lblCodigo_Actividad.Size = new System.Drawing.Size(117, 12);
             this.lblCodigo_Actividad.TabIndex = 2;
             this.lblCodigo_Actividad.Text = "Codigo Actividad";
-            // 
-            // cmdEliminar
-            // 
-            this.cmdEliminar.Location = new System.Drawing.Point(274, 152);
-            this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(75, 23);
-            this.cmdEliminar.TabIndex = 11;
-            this.cmdEliminar.Text = "Eliminar";
-            this.cmdEliminar.UseVisualStyleBackColor = true;
             // 
             // lblActividad
             // 
             this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(18, 22);
+            this.lblActividad.Location = new System.Drawing.Point(21, 20);
+            this.lblActividad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(51, 13);
+            this.lblActividad.Size = new System.Drawing.Size(68, 12);
             this.lblActividad.TabIndex = 8;
             this.lblActividad.Text = "Actividad";
             // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.Enabled = false;
+            this.cmdEliminar.Location = new System.Drawing.Point(330, 140);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(88, 21);
+            this.cmdEliminar.TabIndex = 11;
+            this.cmdEliminar.Text = "Eliminar";
+            this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
+            // 
             // frmEliminarActividad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 189);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(458, 174);
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.mrcDatos);
             this.Controls.Add(this.cmdEliminar);
+            this.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmEliminarActividad";
             this.ShowIcon = false;
             this.Text = "Eliminar Actividad";
+            this.Load += new System.EventHandler(this.frmEliminarActividad_Load);
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
             this.ResumeLayout(false);

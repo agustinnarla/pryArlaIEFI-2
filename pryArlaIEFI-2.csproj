@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -46,20 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAcceso.cs" />
     <Compile Include="clsActividad.cs" />
     <Compile Include="clsBarrio.cs" />
     <Compile Include="clsCliente.cs" />
+    <Compile Include="clsProfesor.cs" />
     <Compile Include="frmAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAcceso.Designer.cs">
       <DependentUpon>frmAcceso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCaja.Designer.cs">
-      <DependentUpon>frmCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaActividad.cs">
       <SubType>Form</SubType>
@@ -72,12 +68,6 @@
     </Compile>
     <Compile Include="frmConsultarBarrio.Designer.cs">
       <DependentUpon>frmConsultarBarrio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmConsultarProfe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarProfe.Designer.cs">
-      <DependentUpon>frmConsultarProfe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEliminarActividad.cs">
       <SubType>Form</SubType>
@@ -163,28 +153,16 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRutina.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRutina.Designer.cs">
-      <DependentUpon>frmRutina.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAcceso.resx">
       <DependentUpon>frmAcceso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCaja.resx">
-      <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaActividad.resx">
       <DependentUpon>frmConsultaActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultarBarrio.resx">
       <DependentUpon>frmConsultarBarrio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarProfe.resx">
-      <DependentUpon>frmConsultarProfe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminarActividad.resx">
       <DependentUpon>frmEliminarActividad.cs</DependentUpon>
@@ -227,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRutina.resx">
-      <DependentUpon>frmRutina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

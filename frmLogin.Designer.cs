@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.cmdIngresar = new System.Windows.Forms.Button();
             this.mrcUsuario = new System.Windows.Forms.GroupBox();
+            this.mrcLinea = new System.Windows.Forms.GroupBox();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pickLogo = new System.Windows.Forms.PictureBox();
             this.lblAyuda = new System.Windows.Forms.Label();
-            this.mrcLinea = new System.Windows.Forms.GroupBox();
             this.mrcAyuda = new System.Windows.Forms.GroupBox();
-            this.mrcUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pickLogo)).BeginInit();
             this.mrcAyuda.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdIngresar
             // 
-            this.cmdIngresar.Location = new System.Drawing.Point(455, 154);
+            this.cmdIngresar.Location = new System.Drawing.Point(530, 142);
+            this.cmdIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdIngresar.Name = "cmdIngresar";
-            this.cmdIngresar.Size = new System.Drawing.Size(90, 33);
+            this.cmdIngresar.Size = new System.Drawing.Size(105, 31);
             this.cmdIngresar.TabIndex = 5;
             this.cmdIngresar.Text = "Ingresar";
             this.cmdIngresar.UseVisualStyleBackColor = true;
@@ -55,18 +56,31 @@
             // 
             // mrcUsuario
             // 
-            this.mrcUsuario.Controls.Add(this.mrcLinea);
-            this.mrcUsuario.Location = new System.Drawing.Point(289, -2);
+            this.mrcUsuario.Location = new System.Drawing.Point(337, -2);
+            this.mrcUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mrcUsuario.Name = "mrcUsuario";
-            this.mrcUsuario.Size = new System.Drawing.Size(12, 264);
+            this.mrcUsuario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcUsuario.Size = new System.Drawing.Size(14, 244);
             this.mrcUsuario.TabIndex = 4;
             this.mrcUsuario.TabStop = false;
+            // 
+            // mrcLinea
+            // 
+            this.mrcLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.mrcLinea.Location = new System.Drawing.Point(337, -2);
+            this.mrcLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcLinea.Name = "mrcLinea";
+            this.mrcLinea.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcLinea.Size = new System.Drawing.Size(14, 267);
+            this.mrcLinea.TabIndex = 5;
+            this.mrcLinea.TabStop = false;
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(323, 108);
+            this.lblContraseña.Location = new System.Drawing.Point(377, 100);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(102, 18);
             this.lblContraseña.TabIndex = 3;
@@ -76,7 +90,8 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(323, 61);
+            this.lblUsuario.Location = new System.Drawing.Point(377, 56);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(70, 18);
             this.lblUsuario.TabIndex = 2;
@@ -84,29 +99,40 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(435, 110);
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtContraseña.Location = new System.Drawing.Point(507, 101);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraseña.MaxLength = 4;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(110, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(128, 20);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtUsuario
             // 
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.Window;
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtUsuario.Location = new System.Drawing.Point(435, 59);
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUsuario.Location = new System.Drawing.Point(507, 55);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.MaxLength = 5;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(110, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(128, 20);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // pickLogo
             // 
-            this.pickLogo.Location = new System.Drawing.Point(31, 29);
+            this.pickLogo.Image = ((System.Drawing.Image)(resources.GetObject("pickLogo.Image")));
+            this.pickLogo.Location = new System.Drawing.Point(34, 28);
+            this.pickLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pickLogo.Name = "pickLogo";
-            this.pickLogo.Size = new System.Drawing.Size(229, 209);
+            this.pickLogo.Size = new System.Drawing.Size(272, 215);
+            this.pickLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pickLogo.TabIndex = 6;
             this.pickLogo.TabStop = false;
             // 
@@ -114,7 +140,8 @@
             // 
             this.lblAyuda.AutoSize = true;
             this.lblAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAyuda.Location = new System.Drawing.Point(8, 12);
+            this.lblAyuda.Location = new System.Drawing.Point(9, 11);
+            this.lblAyuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAyuda.Name = "lblAyuda";
             this.lblAyuda.Size = new System.Drawing.Size(59, 16);
             this.lblAyuda.TabIndex = 7;
@@ -123,28 +150,24 @@
             this.lblAyuda.MouseLeave += new System.EventHandler(this.lblAyuda_MouseLeave);
             this.lblAyuda.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblAyuda_MouseMove);
             // 
-            // mrcLinea
-            // 
-            this.mrcLinea.Location = new System.Drawing.Point(0, 0);
-            this.mrcLinea.Name = "mrcLinea";
-            this.mrcLinea.Size = new System.Drawing.Size(12, 264);
-            this.mrcLinea.TabIndex = 5;
-            this.mrcLinea.TabStop = false;
-            // 
             // mrcAyuda
             // 
             this.mrcAyuda.Controls.Add(this.lblAyuda);
-            this.mrcAyuda.Location = new System.Drawing.Point(326, 228);
+            this.mrcAyuda.Location = new System.Drawing.Point(380, 221);
+            this.mrcAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mrcAyuda.Name = "mrcAyuda";
-            this.mrcAyuda.Size = new System.Drawing.Size(272, 34);
+            this.mrcAyuda.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcAyuda.Size = new System.Drawing.Size(255, 32);
             this.mrcAyuda.TabIndex = 8;
             this.mrcAyuda.TabStop = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 265);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(662, 266);
+            this.Controls.Add(this.mrcLinea);
             this.Controls.Add(this.pickLogo);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
@@ -153,10 +176,12 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.mrcUsuario);
             this.Controls.Add(this.mrcAyuda);
+            this.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
+            this.ShowIcon = false;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.mrcUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pickLogo)).EndInit();
             this.mrcAyuda.ResumeLayout(false);
             this.mrcAyuda.PerformLayout();

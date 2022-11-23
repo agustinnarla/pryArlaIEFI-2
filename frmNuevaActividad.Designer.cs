@@ -31,18 +31,19 @@
             this.cmdSalir = new System.Windows.Forms.Button();
             this.cmdCargar = new System.Windows.Forms.Button();
             this.mrcNuevaActividad = new System.Windows.Forms.GroupBox();
+            this.lstProfesor = new System.Windows.Forms.ComboBox();
+            this.lblProfesor = new System.Windows.Forms.Label();
             this.lblNombreActividad = new System.Windows.Forms.Label();
             this.txtNombreActividad = new System.Windows.Forms.TextBox();
-            this.lblProfesor = new System.Windows.Forms.Label();
-            this.lstProfesor = new System.Windows.Forms.ComboBox();
             this.mrcNuevaActividad.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdSalir
             // 
-            this.cmdSalir.Location = new System.Drawing.Point(141, 133);
+            this.cmdSalir.Location = new System.Drawing.Point(201, 123);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(84, 30);
+            this.cmdSalir.Size = new System.Drawing.Size(98, 28);
             this.cmdSalir.TabIndex = 20;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
@@ -50,12 +51,15 @@
             // 
             // cmdCargar
             // 
-            this.cmdCargar.Location = new System.Drawing.Point(244, 133);
+            this.cmdCargar.Enabled = false;
+            this.cmdCargar.Location = new System.Drawing.Point(321, 123);
+            this.cmdCargar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(81, 30);
+            this.cmdCargar.Size = new System.Drawing.Size(94, 28);
             this.cmdCargar.TabIndex = 19;
             this.cmdCargar.Text = "Cargar";
             this.cmdCargar.UseVisualStyleBackColor = true;
+            this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 
             // mrcNuevaActividad
             // 
@@ -63,57 +67,72 @@
             this.mrcNuevaActividad.Controls.Add(this.lblProfesor);
             this.mrcNuevaActividad.Controls.Add(this.lblNombreActividad);
             this.mrcNuevaActividad.Controls.Add(this.txtNombreActividad);
-            this.mrcNuevaActividad.Location = new System.Drawing.Point(12, 12);
+            this.mrcNuevaActividad.Location = new System.Drawing.Point(14, 11);
+            this.mrcNuevaActividad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mrcNuevaActividad.Name = "mrcNuevaActividad";
-            this.mrcNuevaActividad.Size = new System.Drawing.Size(344, 115);
+            this.mrcNuevaActividad.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.mrcNuevaActividad.Size = new System.Drawing.Size(401, 106);
             this.mrcNuevaActividad.TabIndex = 18;
             this.mrcNuevaActividad.TabStop = false;
+            // 
+            // lstProfesor
+            // 
+            this.lstProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstProfesor.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.lstProfesor.FormattingEnabled = true;
+            this.lstProfesor.Location = new System.Drawing.Point(187, 67);
+            this.lstProfesor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lstProfesor.Name = "lstProfesor";
+            this.lstProfesor.Size = new System.Drawing.Size(204, 20);
+            this.lstProfesor.TabIndex = 3;
+            this.lstProfesor.SelectedIndexChanged += new System.EventHandler(this.lstProfesor_SelectedIndexChanged);
+            // 
+            // lblProfesor
+            // 
+            this.lblProfesor.AutoSize = true;
+            this.lblProfesor.Location = new System.Drawing.Point(18, 67);
+            this.lblProfesor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProfesor.Name = "lblProfesor";
+            this.lblProfesor.Size = new System.Drawing.Size(61, 12);
+            this.lblProfesor.TabIndex = 2;
+            this.lblProfesor.Text = "Profesor";
             // 
             // lblNombreActividad
             // 
             this.lblNombreActividad.AutoSize = true;
-            this.lblNombreActividad.Location = new System.Drawing.Point(15, 33);
+            this.lblNombreActividad.Location = new System.Drawing.Point(18, 30);
+            this.lblNombreActividad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreActividad.Name = "lblNombreActividad";
-            this.lblNombreActividad.Size = new System.Drawing.Size(117, 13);
+            this.lblNombreActividad.Size = new System.Drawing.Size(159, 12);
             this.lblNombreActividad.TabIndex = 0;
             this.lblNombreActividad.Text = "Nombre de la Actividad";
             // 
             // txtNombreActividad
             // 
-            this.txtNombreActividad.Location = new System.Drawing.Point(138, 30);
+            this.txtNombreActividad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombreActividad.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.txtNombreActividad.Location = new System.Drawing.Point(188, 28);
+            this.txtNombreActividad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreActividad.Name = "txtNombreActividad";
-            this.txtNombreActividad.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreActividad.Size = new System.Drawing.Size(204, 20);
             this.txtNombreActividad.TabIndex = 1;
-            // 
-            // lblProfesor
-            // 
-            this.lblProfesor.AutoSize = true;
-            this.lblProfesor.Location = new System.Drawing.Point(36, 73);
-            this.lblProfesor.Name = "lblProfesor";
-            this.lblProfesor.Size = new System.Drawing.Size(46, 13);
-            this.lblProfesor.TabIndex = 2;
-            this.lblProfesor.Text = "Profesor";
-            // 
-            // lstProfesor
-            // 
-            this.lstProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstProfesor.FormattingEnabled = true;
-            this.lstProfesor.Location = new System.Drawing.Point(137, 73);
-            this.lstProfesor.Name = "lstProfesor";
-            this.lstProfesor.Size = new System.Drawing.Size(175, 21);
-            this.lstProfesor.TabIndex = 3;
+            this.txtNombreActividad.TextChanged += new System.EventHandler(this.txtNombreActividad_TextChanged);
             // 
             // frmNuevaActividad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 169);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(429, 156);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdCargar);
             this.Controls.Add(this.mrcNuevaActividad);
+            this.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmNuevaActividad";
             this.ShowIcon = false;
             this.Text = "Nueva Actividad";
+            this.Load += new System.EventHandler(this.frmNuevaActividad_Load);
             this.mrcNuevaActividad.ResumeLayout(false);
             this.mrcNuevaActividad.PerformLayout();
             this.ResumeLayout(false);
